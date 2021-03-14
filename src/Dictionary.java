@@ -8,9 +8,9 @@ public class Dictionary {
                 "I really hope you can. If not, I’ll see you on the Hogwarts Express on September first! Love from Hermione P.S. Ron says Percy’s Head Boy. I’ll bet Percy’s really pleased. Ron doesn’t seem too happy about it";
         int count ;
         char ch ;
-          String string1 = string.toLowerCase().replaceAll("[!?.(),.;\n-']", "");
+          String string1 = string.toLowerCase().replaceAll("[-!?(),.—’;\n-']" , ""); //-—’
         HashMap<Character, Integer> dictionary = new HashMap<Character, Integer>();
-        for(int i = 0; i < string1.length(); i ++){
+        for(int i = 0; i < string1.length(); i++){
             ch = string1.charAt(i);
             if(dictionary.containsKey(ch)){
                 count = dictionary.get(ch);
